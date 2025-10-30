@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #1e0022;
+    --secondary-color: #02bb77;
+    --tertiary-color: #f87693;
+    --color-lt: #f7f5dd;
+    --color-dk: #080807;
+
+    --bg-color-lt: #ffffff;
+
+    --primary-font: 'Lora', serif;
+    --secondary-font: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-color-lt);
+    color: var(--color-dk);
+    min-height: 100vh;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--secondary-font);
+}
+
+.link {
+    color: var(--color-dk);
+    text-decoration: none;
+    padding: 1rem 0;
+}
+
+.link>span {
+    font-style: italic;
+}
+
+.link:hover, .link:active {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.hr-custom {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    height: 3px;
+    opacity: .75;
+}
+
+.hr-custom-sm {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    height: 2px;
+    opacity: .5;
+}
+
+.rounded-img {
+    border-radius: 50%;
+    scale: 75%;
+}
+
+.custom-button {
+  background: var(--secondary-color);
+  color: var(--bg-color-lt);
+  font-family: inherit;
+  border: 1px solid white;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 2rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  min-width: 200px;
+  padding-right: 3.3em;
+  padding-left: 1rem;
+  cursor: pointer;
+
+  /* Smooth transition for background and text color */
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+.custom-button .icon {
+  background: var(--bg-color-lt);
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 2rem;
+  right: 0.3em;
+
+  /* Already includes transition for icon */
+  transition:
+    background-position 0.5s ease-out,
+    border 0.2s ease-out,
+    color 0.5s ease-out;
+  will-change: width, transform;
+}
+
+.custom-button:hover {
+  background-color: var(--bg-color-lt);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.custom-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+  color: var(--secondary-color);
+}
+
+.custom-button:hover .icon svg {
+  transform: translateX(0.1em) rotate(-25deg);
+}
+
+.custom-button:active .icon {
+  transform: scale(0.95);
+}
+.title {
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+#main {
+    padding: 0;
+}
+
+#main-desc {
+    justify-self: center;
+    margin: 1rem;
+}
+
+#gfm-campaign-widget > img {
+    display: none !important;
+}
+
+@media (min-width: 48rem) {
+    #main-desc {
+        width: 75%;
+        margin: 2.5rem;
+    }
+}
+
+@media (min-width: 62rem) {
+    #main-desc {
+        width: 50%;
+        margin: 5rem;
+    }
+}
