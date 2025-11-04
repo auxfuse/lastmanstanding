@@ -98,10 +98,11 @@ h6 {
   overflow: hidden;
   position: relative;
   height: 2.8em;
-  min-width: 200px;
+  min-width: 250px;
   padding-right: 3.3em;
   padding-left: 1rem;
   cursor: pointer;
+  justify-self: center;
 
   /* Smooth transition for background and text color */
   transition:
@@ -163,14 +164,23 @@ h6 {
     margin: 1rem;
 }
 
-#gfm-campaign-widget > img {
-    display: none !important;
+#terms-list > li {
+    padding-left: 0.5rem;
+}
+
+#terms-list li::marker {
+    content: "⚽ ";
+    font-size: 0.85rem;
 }
 
 @media (min-width: 48rem) {
     #main-desc {
         width: 75%;
         margin: 2.5rem;
+    }
+
+    .custom-button {
+        justify-self: left;
     }
 }
 
